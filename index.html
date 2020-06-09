@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/bea0659c81.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Jomhuria&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/> 
+    <link rel="stylesheet" href="main.css">
+    <title>ratatouille</title>
+    <link rel="icon" type="imge/png" href="1/img/menuimg/burger.png">
+</head>
+<body>
+  <!-- -------------navigation------------ -->
+    <div class="nav">
+        <input type="checkbox" name="navtoggle" id="navtoggle" class="nav-checkbox">
+        <label for="navtoggle" class="nav-toggle">
+            <span class="nav-icon">&nbsp;</span>
+        </label>
+        <div class="nav-back">&nbsp;</div>
+        <div class="nav-nav">
+          <ul class="nav-list">    
+            <li class="nav-item nav-item-home"><a href="index.html" class="nav-link"><p class="orange">خانه</p></a></li>
+            <li class="nav-item nav-item-about"><a href="#about" class="nav-link"> درباره مـا </a></li>
+            <li class="nav-item nav-item-menu"><a href="#menu" class="nav-link">منو</a></li>
+            <li class="nav-item nav-item-gallery"><a href="#gallery" class="nav-link">گــالــری</a></li>
+            <li class="nav-item nav-item-signbox"><a href="#" class="nav-link signbtn">ورود کــاربر </i></a></li>
+            <li class="nav-item nav-item-calling"><a href="#contact" class="nav-link">تـمـاس بـا مـا</a></li>
+            <li class="nav-item nav-item-kartbox"><a href="" class="nav-link"><i class="fas fa-shopping-cart kart"></i></a></li>
+          </ul>
+        </div>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script>
+          $(".nav-item").click(function(){
+            $( "#navtoggle" ).prop( "checked", false );
+          });
+          $(".nav-back").click(function(){
+            $( "#navtoggle" ).prop( "checked", false );
+          });
+        </script>
+    </div>
+
+  
+
+
+<div class="homepage">  
+    <!-- -------top menu------header----- -->
+    <div class="fixedtop">
+      <div class="topright"> 
+      <ul>    
+        <li class="home"><a href="index.html"><p class="orange">خانه</p></a></li>
+        <li class="aboutus top"><a href="#about"> درباره مـا </a></li>
+        <li class="menu top"><a href="#menu">منو</a></li>
+        <li class="gallery top"><a href="#gallery">گــالــری</a></li>
+        <li class="sign-box top"><a href="#" class="signbtn">ورود کــاربر </i></a></li>
+        <li class="calling top"><a href="#contact">تـمـاس بـا مـا</a></li>
+        <li class="kartbox"><a href=""><i class="fas fa-shopping-cart kart"></i></a></li>
+      </ul>
+     </div>  
+      <div class="topleft">
+        <P class="logo">LOGOBOX</P>
+      </div>  
+    </div>
+      <!-- --------------------sign box-------------- -->
+      <div class="sign sign-back">&nbsp;</div>
+      <!-- --------sign-in--------- -->
+        <div class="sign-in">
+          <form action="sign.php"  method="post"  class="form form-1">
+            <h2><strong>ورود</strong></h2>
+            <div class="form-box">
+                 
+                <input type="text" name="username" id="username" placeholder="username" class="form-input" required>
+                <label for="username" class="form-label">username</label>
+                <div class="form-icon"><i class="fas fa-user"></i></div>
+            </div>  
+            <div class="form-box">
+                
+                <input type="password" name="pass" id="pass" placeholder="password" class="form-input" required>
+                <label for="pasword" class="form-label">password</label>
+                <div class="form-icon"><i class="fas fa-lock"></i></div>
+            </div>
+            <div class="row">
+              <div class="row-1"><input type="submit" name="" id="" value="ثبت" class="submit-btn"></div>
+              <div class="row-2"><a href="#" class="gotosignup">ایجاد حساب</a></div>
+            </div>
+          </div>
+
+        </form>
+        </div>
+        <!-- --------sign-up--------- -->
+        <div class="sign-up">
+          <form action="" method="post" class="form" data-simplebar>
+            <h2><strong>عضویت</strong></h2>
+            <div class="form-box">
+                <input type="text" name="name" id="name" placeholder="نام" class="form-input" required>
+                <label for="name" class="form-label">نام</label>
+            </div> 
+            <div class="form-box">
+                <input type="text" name="lastname" id="lastname" placeholder="نام خانوادگی" class="form-input" required>
+                <label for="lastname" class="form-label">نام خانوادگی</label>
+            </div> 
+            <div class="form-box">
+                <input type="text" name="username" id="username" placeholder="username" class="form-input" required>
+                <label for="username" class="form-label">username</label>
+            </div>  
+            <div class="form-box">
+                <input type="password" name="pass" id="pass" placeholder="رمز عبور" class="form-input" required>
+                <label for="pass" class="form-label">رمز عبور</label>
+            </div> 
+            <div class="form-box">
+                <input type="password" name="pass2" id="pass2" placeholder="تکرار رمز عبور" class="form-input" required>
+                <label for="pass2" class="form-label">تکرار رمز عبور</label>
+            </div>
+            <div class="form-box">
+                <input type="email" name="email" id="email" placeholder="e-mail" class="form-input" required>
+                <label for="email" class="form-label">e-mail</label>
+            </div>  
+            <div class="form-box">
+                <input type="number" name="p-number" id="p-number" placeholder="شماره تماس" class="form-input" required>
+                <label for="p-number" class="form-label">شماره تماس</label>
+            </div>  
+            <div class="row">
+            <div class="row-1"><input type="submit" name="" id="" value="ثبت" class="submit-btn"></div>
+            <div class="row-2"><a href="#" class="gotosignin">حساب دارم</a></div>
+          </div>
+        </form>
+        </div>
+
+  
+      
+      <script>
+            $(".signbtn").click(function(){
+              $( ".sign-back" ).fadeIn(1000);
+            });
+
+            $(".signbtn").click(function(){
+              $( ".sign-in" ).fadeIn(1500);
+            });
+
+
+            $(".sign-back").click(function(){
+                $( ".sign-back" ).fadeOut(500);
+              });
+
+              $(".sign-back").click(function(){
+                $( ".sign-in" ).fadeOut(1000);
+              });
+              $(".sign-back").click(function(){
+                $( ".sign-up" ).fadeOut(1000);
+              });
+
+              $(".gotosignup").click(function(){
+                $( ".sign-in" ).fadeOut(1000, function(){
+                  $(".sign-up").fadeIn(1000)
+                });
+              });
+              $(".gotosignin").click(function(){
+                $( ".sign-up" ).fadeOut(1000, function(){
+                  $(".sign-in").fadeIn(1000)
+                });
+              });
+        </script>
+    <!-- ------top img------- -->
+          <div class="topimgdiv">
+            <!-- <div class="textbox"> -->
+              <p class="toptext">رستوران راتاتویل</p>
+                <!-- <a href="" class="btn-reserve"><strong>رزرو میز</strong></a>
+            </div> -->
+          </div>
+    <!-- ----------------gallery&about--------------- -->
+        <div class="albumsec">  
+          <div class="album-title" id="gallery"> <p class="album-title-p">گـالری </p> </div>  
+          <div class="row"> 
+            <div class="album albumRsec" data-aos="zoom-in-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+              <img src="1/img/0d05461d-2f61-4304-bf1b-fbcaf435e4da.jfif" alt="1" class="album-photo album-photo-1">
+              <img src="1/img/5ddb4741-15e8-4c6e-9328-bd51a5367cfc.jfif" alt="2" class="album-photo album-photo-2">
+              <img src="1/img/85e9c255-4b10-40a2-b14a-ccd0870af85a.jfif" alt="3" class="album-photo album-photo-3">
+              <img src="1/img/8fbb8512-0b0f-4c32-8f33-0490fa19f3e2.jfif" alt="4" class="album-photo album-photo-4">
+              <img src="1/img/9e3b3662-16b7-4108-b20e-4ef0ca43bf71.jfif" alt="5" class="album-photo album-photo-5">
+              <img src="1/img/aad09fbb-7f2e-4c11-8a70-cb2bc0bd99bc.jfif" alt="6" class="album-photo album-photo-6">
+              <img src="1/img/b1d96beb-0f91-4194-95fa-097953f91faf.jfif" alt="7" class="album-photo album-photo-7">
+            </div> 
+              <div class="albumLsec" data-aos="fade-up-right">
+                <h3 class="albumLsec-title" id="about">راتاتویل</h3><br>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت 
+                  چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                   در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                   متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته،
+                   حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری 
+                  را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                   در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت 
+                  اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                <div class="row">
+                  <div class="albumLsec-extention"><h4>ساعت کاری:</h4><p>11 الی 23</p></div>
+                  <div class="albumLsec-extention"><h4>منو:</h4><p>ایرانی - خارجی</p></div>
+                  <div class="albumLsec-extention"><h4>فضای باز:</h4><p>دارد</p></div>
+                  <div class="albumLsec-extention"><h4>پارکینگ:</h4><p>دارد</p></div>
+                  <div class="albumLsec-extention"><h4 style="font-family: arial;"><i class="fas fa-wifi"></i>WIFI:</h4><p>دارد</p></div>
+                </div>  
+              </div>
+
+          </div>
+        </div>
+        <!-- ---------------menu--------------- -->
+        <section class="menusec">
+          <div class="menusec-title">
+            <p class="menusec-title-p" id="menu">menu</p>
+          </div>
+          <!-- ------FASTFOOD ------- -->
+          <div class="card" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <div class="card-side card-side-front card-side-front-fastfood">
+              <p>فست فود</p>
+            </div>
+            <div class="card-side card-side-back card-side-back-fastfood" data-simplebar>
+              <div class="row">
+                <div class="menubackL">
+                  <div class="menuitem peperony">
+                      <div class="menuitem-name">پیتزا پپرونی</div>
+                      <div class="menuitem-price">25.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem special">
+                      <div class="menuitem-name">پیتزا مخصوص</div>
+                      <div class="menuitem-price">35.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem makhloot">
+                      <div class="menuitem-name">پیتزا مخلوط</div>
+                      <div class="menuitem-price">29.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem gooshtoqarch">
+                      <div class="menuitem-name">پیتزا گوشت و قارچ</div>
+                      <div class="menuitem-price">28.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem sabzi">
+                      <div class="menuitem-name">پیتزا استیک مرغ</div>
+                      <div class="menuitem-price">27.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem sabzi">
+                      <div class="menuitem-name">پیتزا سبزیجات</div>
+                      <div class="menuitem-price">20.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                  </div>
+                  <img src="1/img/menuimg/pizza.png" alt="" class="pizza">
+                </div>
+                <div class="menubackM">
+                  <div class="menuitem burger">
+                      <div class="menuitem-name">برگر</div>
+                      <div class="menuitem-price">28.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem chickenburger">
+                      <div class="menuitem-name">چیکن برگر</div>
+                      <div class="menuitem-price">25.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem peperony">
+                      <div class="menuitem-name">یونانی</div>
+                      <div class="menuitem-price">30.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem peperony">
+                      <div class="menuitem-name">فیله گوشت</div>
+                      <div class="menuitem-price">35.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem peperony">
+                      <div class="menuitem-name">ژامبون تنوری</div>
+                      <div class="menuitem-price">25.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem grill">
+                      <div class="menuitem-name">گریل مرغ</div>
+                      <div class="menuitem-price">27.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <img src="1/img/menuimg/burger.png" alt="" class="burgerpic">
+                </div>                
+                <div class="menubackR">
+                  <div class="menuitem kentuky">
+                      <div class="menuitem-name">مرغ کنتاکی (8تکه)</div>
+                      <div class="menuitem-price">45.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem kentuky2">
+                      <div class="menuitem-name">مرغ کنتاکی (4تکه)</div>
+                      <div class="menuitem-price">30.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem kentuky3">
+                      <div class="menuitem-name">قارج سوخاری</div>
+                      <div class="menuitem-price">18.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem friedpotato">
+                      <div class="menuitem-name">سیب زمینی</div>
+                      <div class="menuitem-price">20.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem sfriedpotato">
+                      <div class="menuitem-name">سیب زمینی مخصوص</div>
+                      <div class="menuitem-price">26.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <img src="1/img/menuimg/fried.png" alt="" class="friedpic">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ------IRANI FOOD ------- -->
+
+          <div class="card" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <div class="card-side card-side-front card-side-front-irani">
+              <p>ایرانی</p>
+            </div>
+            <div class="card-side card-side-back card-side-back-irani" data-simplebar>
+              <div class="row">
+                <div class="menubackL">
+                  <div class="menuitem soltani">
+                      <div class="menuitem-name">چلوکباب سلطانی</div>
+                      <div class="menuitem-price">40.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem momtaz6">
+                      <div class="menuitem-name">چلوکباب ممتاز</div>
+                      <div class="menuitem-price">40.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem filegoos">
+                      <div class="menuitem-name">چلو فیله گوسفندی</div>
+                      <div class="menuitem-price">40.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem majlesi">
+                      <div class="menuitem-name">چلوکباب مجلسی</div>
+                      <div class="menuitem-price">35.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem bakhtiari">
+                      <div class="menuitem-name">چلوکباب بختیاری</div>
+                      <div class="menuitem-price">35.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem tabrizi">
+                      <div class="menuitem-name">چلوکباب تبریزی</div>
+                      <div class="menuitem-price">28.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem qafqazi">
+                      <div class="menuitem-name">چلوکباب قفقازی</div>
+                      <div class="menuitem-price">34.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem negin">
+                      <div class="menuitem-name">چلوکباب نگین دار</div>
+                      <div class="menuitem-price">34.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem loqme">
+                      <div class="menuitem-name">چلوکباب لقمه</div>
+                      <div class="menuitem-price">30.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+
+                </div>
+                <div class="menubackM">
+                  <div class="menuitem baqaligo">
+                      <div class="menuitem-name">باقالی پلو با گوشت</div>
+                      <div class="menuitem-price">40.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem baqalimo">
+                      <div class="menuitem-name">باقالی پلو با مرغ</div>
+                      <div class="menuitem-price">35.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem zereshk">
+                      <div class="menuitem-name">زرشک پلو با مرغ</div>
+                      <div class="menuitem-price">40.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem qeime qeimeba">
+                      <div class="menuitem-name">خورشت قیمه (بادمجان)</div>
+                      <div class="menuitem-price">35.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem qeime qeimesib">
+                      <div class="menuitem-name">خورشت قیمه (سیب زمینی)</div>
+                      <div class="menuitem-price">35.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem qorme">
+                      <div class="menuitem-name">خورشت قرمه سبزی</div>
+                      <div class="menuitem-price">38.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem karafs">
+                      <div class="menuitem-name">خورشت کرفس</div>
+                      <div class="menuitem-price">38.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem adas">
+                      <div class="menuitem-name">عدس پلو با گوشت</div>
+                      <div class="menuitem-price">38.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem loobia">
+                      <div class="menuitem-name">لوبیاپلو</div>
+                      <div class="menuitem-price">28.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+
+                </div>
+                <div class="menubackR">
+                  <div class="menuitem qezel">
+                      <div class="menuitem-name">ماهی قزل آلا</div>
+                      <div class="menuitem-price">20.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem shenisel">
+                      <div class="menuitem-name">شنیسل مرغ</div>
+                      <div class="menuitem-price">20.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem joojechini">
+                      <div class="menuitem-name">جوجه چینی</div>
+                      <div class="menuitem-price">28.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem ketf">
+                      <div class="menuitem-name">کتف کبابی(9تکه)</div>
+                      <div class="menuitem-price">25.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem bal">
+                      <div class="menuitem-name">بال کبابی(9تکه)</div>
+                      <div class="menuitem-price">22.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                  <div class="menuitem soop">
+                      <div class="menuitem-name">سوپ جو</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add kartbox"><a href="">+</a></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- ------SALAD MENU ------- -->
+          <div class="card" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <div class="card-side card-side-front card-side-front-salad">
+              <p>سالاد</p>
+            </div>
+            <div class="card-side card-side-back card-side-back-salad" data-simplebar>
+              <div class="row">
+                <div class="menubackL">
+                  <div class="menuitem sezar">
+                      <div class="menuitem-name">سالاد سزار</div>
+                      <div class="menuitem-price">25.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">کاهو - مرغ - نان تست - پنیر پارمسان - سس سزار</div>
+                  </div>
+                  <div class="menuitem antrokt">
+                      <div class="menuitem-name">سالاد آنتروکت</div>
+                      <div class="menuitem-price">25.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">کاهو - مرغ - گوجه - کنجد - سس آنتروکت</div>
+                  </div>
+                  <div class="menuitem pesto">
+                      <div class="menuitem-name">سالاد پستو</div>
+                      <div class="menuitem-price">25.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">کاهو - مرغ - گوجه گیلاسی - پنیر پستو - سس پستئو</div>
+                  </div>
+                  <div class="menuitem kalam">
+                      <div class="menuitem-name">سالاد کلم</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">کلم سبز - کلم قرمز - کاهو - هویج - ذرت - سس نارنج</div>
+                  </div>
+                  <div class="menuitem borokli">
+                      <div class="menuitem-name">سالاد بروکلی</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">بروکلی - خیار - گوجه - هویج - زیتون - سس نارنج - لیمو</div>
+                  </div>
+                  <div class="menuitem sibtokhm">
+                      <div class="menuitem-name">سالاد سیب زمینی تخم مرغ</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">سیب زمینی - تخم مرغ - خیار شور - سس بالزامیک</div>
+                  </div>
+                </div>
+                <div class="menubackR">
+                  <div class="menuitem morqesabz">
+                      <div class="menuitem-name">سالاد مرغ سبز</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">مرغ - پیازچه - فلفل دلمه - سس ماست موسیر</div>
+                  </div>
+                  <div class="menuitem morqeqermez">
+                      <div class="menuitem-name">سالاد مرغ قرمز</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">مرغ - پیازچه - فلفل دلمه - ماست - سس تند گلوریا</div>
+                  </div>
+                  <div class="menuitem danmarki">
+                      <div class="menuitem-name">سالاد دانمارکی</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">ماکارونی صدفی - سس خردل - شوید - خیار شور - مرغ</div>
+                  </div>
+                  <div class="menuitem ton">
+                      <div class="menuitem-name">سالاد تن ماهی</div>
+                      <div class="menuitem-price">10.000T</div>
+                      <div class="menuitem-add"><a href="">+</a></div>
+                      <div class="menuitem-rec">تن ماهی - لوبیا سبز - هویج - فلفل رنگی - خیار شور</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>  
+        <!-- -------footer------ -->
+        <footer id="contact">
+          <div class="about">
+            <div class="contactus">
+              <div class="row">
+                <div class="contactusL tel">
+                  <p class="contactus-icon"><i class="fas fa-phone-alt"></i></p><br>
+                  <p class="contactus-text">09059592602</p>
+                </div>
+                <div class="contactusM e-mail">
+                  <p class="contactus-icon"><i class="fas fa-envelope"></i></p><br>
+                  <p class="contactus-text">h.tehrani1996@yahoo.com</p>
+                </div>
+                <div class="contactusR location">
+                  <p class="contactus-icon"><i class="fas fa-map-marker-alt"></i></p><br>
+                  <p class="contactus-text">tehran, iran</p>
+                </div>
+              </div>
+            </div>
+            <div class="aboutpart">
+            <div class="row">
+                <div class="aboutpartL introduce">
+                  <h2>web-developer team</h2>
+                  <strong>
+                    <p class="introduce-role">frontend-developer:</p>
+                    <p class="introduce-name">hossein tehrani</p><br>
+                    <p class="introduce-role">backend-developers:</p>
+                    <p class="introduce-name">...</p>
+                  </strong> 
+                </div>
+                <div class="aboutpartR subscribe">
+                  <form action="">
+                  <h2>نظردهی</h2>
+                  <div><input type="email" name="" id="" placeholder="E-mail"></div>
+                  <div><input type="text" name="" id="" placeholder="write your idea..."></div>
+                  <div><input type="submit" name="" id="" value="&rarr;" class="ideasubmit"></div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</div>        
+</body>
+</html>
